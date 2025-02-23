@@ -72,17 +72,17 @@ function App() {
               <div class="skill-title"><span>Skills shop</span></div>
               <div class="flex-row1">
                 <div class="item1">
-                    <img ref={about4Ref} class="logo hidden" src="ui.png" alt="UI/UX" width="50" height="50"/>
+                    <img ref={about4Ref} class="logo hidden" src="ui.png" width="50" height="50"/>
                     <img src="/shelf-blue1.png" alt="UI/UX" width="120" height="100" />
                     <div ref={about11Ref} class="throwable hidden">UI/UX</div>
                 </div>
                 <div class="item1">
-                    <img ref={about5Ref} class="logo hidden" src="web-link.png" alt="Web" width="50" height="50"/>
+                    <img ref={about5Ref} class="logo hidden" src="web-link.png" width="50" height="50"/>
                     <img src="/shelf-blue1.png" alt="Web" width="120" height="100" />
                     <div ref={about12Ref} class="throwable hidden">Web</div>
                 </div>
                 <div class="item1">
-                    <img ref={about6Ref} class="logo hidden" src="controller.png" alt="Game" width="50" height="50"/>
+                    <img ref={about6Ref} class="logo hidden" src="controller.png" width="50" height="50"/>
                     <img src="/shelf-blue1.png" alt="Game" width="120" height="100" />
                     <div ref={about13Ref} class="throwable hidden">Game</div>
                 </div>
@@ -91,27 +91,27 @@ function App() {
               <div class="skill-title"><span>Tools shop</span></div>
               <div class="flex-row2">
                 <div class="item2">
-                    <img ref={about7Ref} class="logo hidden" src="figma-color.png" alt="Banner" width="50" height="50"/>
+                    <img ref={about7Ref} class="logo hidden" src="figma-color.png" width="50" height="50"/>
                     <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
                     <div ref={about14Ref} class="throwable hidden">Figma</div>
                 </div>
                 <div class="item2">
-                    <img ref={about8Ref} class="logo hidden" src="note.png" alt="Banner" width="50" height="50"/>
+                    <img ref={about8Ref} class="logo hidden" src="note.png" width="50" height="50"/>
                     <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
                     <div ref={about15Ref} class="throwable hidden">Pen & Paper</div>
                 </div>
                 <div class="item2">
-                    <img ref={about9Ref} class="logo hidden" src="sql-server.png" alt="Banner" width="50" height="50"/>
+                    <img ref={about9Ref} class="logo hidden" src="sql-server.png" width="50" height="50"/>
                     <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
                     <div ref={about16Ref} class="throwable hidden">SQL Server</div>
                 </div>
                 <div class="item2">
-                    <img ref={about10Ref} class="logo hidden" src="visual-studio.png" alt="Banner" width="50" height="50"/>
+                    <img ref={about10Ref} class="logo hidden" src="visual-studio.png" width="50" height="50"/>
                     <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
                     <div ref={about17Ref} class="throwable hidden">VS Studio</div>
                 </div>
                 <div class="item2">
-                    <img ref={about0Ref} class="logo hidden" src="visual-code.png" alt="Banner" width="50" height="50"/>
+                    <img ref={about0Ref} class="logo hidden" src="visual-code.png" width="50" height="50"/>
                     <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
                     <div ref={about18Ref} class="throwable hidden">VS Code</div>
                 </div>
