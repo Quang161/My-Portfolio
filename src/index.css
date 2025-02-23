@@ -1,0 +1,19 @@
+:root {
+    font-family: 'rawline', sans-serif; 
+    font-optical-sizing: auto;
+    font-style: normal;  
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgb(135, 153, 181);
+    background: rgb(42,45,58);
+    background: linear-gradient(90deg, 
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0.8) 35%,
+    rgba(10, 37, 41, 0.9) 50%, 
+    rgba(20, 74, 83, 1) 70%
+    );
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,137 @@
+.card-project {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-project::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.card-project:hover::before {
+    opacity: 1;
+}
+
+.card-project:hover {
+    transform: scale(1.03);
+}
+
+.card-project:hover .title {
+    color: #00ffff;
+}
+
+.card-timeline {
+    flex: 25%;
+}
+
+.timeline {
+    font-size: 0.85rem;
+    color: rgb(135, 153, 181);
+}
+
+.card-Info {
+    flex: 75%;
+}
+
+.title {
+    font-size: 0.9rem;
+    color: white;
+}
+
+.description {
+    font-size: 0.85rem;    
+    color: rgb(135, 153, 181);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.skill {
+    display: flex;
+}
+
+.skill > div {
+    font-size: 0.75rem;
+    margin: 5px 5px 5px 0px;
+}
+
+.sn {
+    padding: 5px 10px 5px 10px;
+    background-color: #2d7177;
+    color: #00ffff;
+    border-radius: 20px;
+}
+
+.sn::selection {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.description {
+    user-select: none;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transform: translateX(60px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-project:nth-child(1) {
+    transition-delay: 0ms !important;
+}
+
+.card-project:nth-child(2) {
+    transition-delay: 600ms !important;
+}
+
+.card-project:nth-child(3) {
+    transition-delay: 300ms !important;
+}
+
+@media (min-width: 1200px) {
+    .card-project {
+        flex-direction: row;
+    }
+
+    .timeline {
+        font-size: 0.9rem;
+        color: rgb(135, 153, 181);
+        margin-left: 15px;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;    
+    }
+
+    .skill > div {
+        font-size: 0.8rem;
+        margin: 5px 0px 10px 10px;
+    }
+}

@@ -1,0 +1,116 @@
+.skill-title {
+    font-size: 1.2rem;
+    width: 30%;
+    text-align: center;
+    background-color: #2d7177;
+    border: 3px solid #00ffff;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-weight: bold;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    position: relative; 
+}
+
+.skill-title span {
+    animation: blink 6s infinite;
+    -webkit-animation: blink 6s infinite;
+}
+
+@-webkit-keyframes blink {
+    20%, 24%, 55% {
+        color: white;
+        text-shadow: none;
+    }
+
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 40px black, 0 0 60px #2323ff, 0 0 10px #2323ff, 0 0 80px #2323ff;
+        color: #2d7177;
+    }
+}
+
+@keyframes blink {
+    20%, 24%, 55% {
+        color: #2d7177;
+        text-shadow: none;
+    }
+
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 40px black, 0 0 60px #2323ff, 0 0 10px #2323ff, 0 0 80px #2323ff;
+        color: #00ffff;
+    }
+}
+
+.skill-title::before,
+.skill-title::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    width: 5px; 
+    height: 50px; 
+    background-color: #00ffff;
+}
+
+.skill-title::before {
+    left: 15%;
+}
+
+.skill-title::after {
+    right: 15%;
+}
+
+.skill-title::after,
+.skill-title::before {
+    border-radius: 5px;
+}
+
+.flex-row1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+
+.item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 33%;
+    max-width: 200px;
+    padding-top: 20px;
+}
+
+.flex-row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    max-width: 200px;
+    padding-top: 20px;
+}
+
+.logo {
+    position: absolute;
+    margin-top: -20px;
+}
+
+.throwable {
+    position: absolute;
+    margin-top: 45px;
+    background-color: #2d7177;
+    color: #00ffff;
+    border: 3px solid #00ffff;
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
