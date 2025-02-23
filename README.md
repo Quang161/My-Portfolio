@@ -1,7 +1,6 @@
 # **My Portfolio**  
 
-🚀 **Quick Link to Site**  
-[My Portfolio](https://quang161.github.io/My-Portfolio/)  
+🚀 **Quick Link to Site**  [My Portfolio](https://quang161.github.io/My-Portfolio/)  
 
 🖥️ **About**  
 This is my personal portfolio website built with React and Vite. It showcases my skills, projects, and contact information.  
