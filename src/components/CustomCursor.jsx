@@ -3,9 +3,16 @@ import React, { useEffect, useState } from "react";
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [cursorColor, setCursorColor] = useState("black");
+  const [isVisible, setIsVisible] = useState(window.innerWidth > 1200);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsVisible(window.innerWidth > 1200);
+    };
+
     const handleMouseMove = (event) => {
+      if (!isVisible) return;
+
       setPosition({ x: event.clientX, y: event.clientY });
 
       if (event.clientX < window.innerWidth * 0.375) {
@@ -15,9 +22,16 @@ const CustomCursor = () => {
       }
     };
 
+    window.addEventListener("resize", handleResize);
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [isVisible]);
+
+  if (!isVisible) return null;
 
   return (
     <div

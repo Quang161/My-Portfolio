@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     padding-top: 10px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -65,7 +65,7 @@
 }
 
 .skill > div {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     margin: 5px 5px 5px 0px;
 }
 

@@ -45,18 +45,18 @@
 .skill-title::after {
     content: "";
     position: absolute;
-    top: -40px;
-    width: 5px; 
-    height: 50px; 
+    top: -24px;
+    width: 4px; 
+    height: 36px; 
     background-color: #00ffff;
 }
 
 .skill-title::before {
-    left: 15%;
+    left: 10%;
 }
 
 .skill-title::after {
-    right: 15%;
+    right: 10%;
 }
 
 .skill-title::after,
@@ -113,4 +113,36 @@
     padding: 4px 12px;
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+    .skill-title {
+        font-size: 1.2rem;
+        width: 40%;
+        padding: 4px 8px;
+        margin: 30px auto;
+    }
+
+    .item1, .item2 {
+        width: 50%;
+        max-width: 150px;
+        padding-top: 10px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+        margin-top: -15px;
+    }
+
+    .throwable {
+        font-size: 0.9rem;
+        padding: 3px 6px;
+        margin-top: 45px;
+    }
+
+    .flex-row1 {
+        padding-top: 15px;
+        padding-bottom: 0px;
+    }
 }

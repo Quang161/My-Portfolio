@@ -73,17 +73,17 @@ function App() {
               <div class="flex-row1">
                 <div class="item1">
                     <img ref={about4Ref} class="logo hidden" src="ui.png" width="50" height="50"/>
-                    <img src="/shelf-blue1.png" alt="UI/UX" width="120" height="100" />
+                    <img src="shelf-blue1.png" width="120" height="100" />
                     <div ref={about11Ref} class="throwable hidden">UI/UX</div>
                 </div>
                 <div class="item1">
                     <img ref={about5Ref} class="logo hidden" src="web-link.png" width="50" height="50"/>
-                    <img src="/shelf-blue1.png" alt="Web" width="120" height="100" />
+                    <img src="shelf-blue1.png" width="120" height="100" />
                     <div ref={about12Ref} class="throwable hidden">Web</div>
                 </div>
                 <div class="item1">
                     <img ref={about6Ref} class="logo hidden" src="controller.png" width="50" height="50"/>
-                    <img src="/shelf-blue1.png" alt="Game" width="120" height="100" />
+                    <img src="shelf-blue1.png" width="120" height="100" />
                     <div ref={about13Ref} class="throwable hidden">Game</div>
                 </div>
               </div>
@@ -92,27 +92,27 @@ function App() {
               <div class="flex-row2">
                 <div class="item2">
                     <img ref={about7Ref} class="logo hidden" src="figma-color.png" width="50" height="50"/>
-                    <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
+                    <img src="shelf-blue1.png" width="120" height="100" />
                     <div ref={about14Ref} class="throwable hidden">Figma</div>
                 </div>
                 <div class="item2">
                     <img ref={about8Ref} class="logo hidden" src="note.png" width="50" height="50"/>
-                    <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
+                    <img src="shelf-blue1.png" width="120" height="100" />
                     <div ref={about15Ref} class="throwable hidden">Pen & Paper</div>
                 </div>
                 <div class="item2">
                     <img ref={about9Ref} class="logo hidden" src="sql-server.png" width="50" height="50"/>
-                    <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
+                    <img src="shelf-blue1.png" width="120" height="100" />
                     <div ref={about16Ref} class="throwable hidden">SQL Server</div>
                 </div>
                 <div class="item2">
                     <img ref={about10Ref} class="logo hidden" src="visual-studio.png" width="50" height="50"/>
-                    <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
+                    <img src="shelf-blue1.png" width="120" height="100" />
                     <div ref={about17Ref} class="throwable hidden">VS Studio</div>
                 </div>
                 <div class="item2">
                     <img ref={about0Ref} class="logo hidden" src="visual-code.png" width="50" height="50"/>
-                    <img src="/shelf-blue1.png" alt="Banner" width="120" height="100" />
+                    <img src="shelf-blue1.png" width="120" height="100" />
                     <div ref={about18Ref} class="throwable hidden">VS Code</div>
                 </div>
               </div>
@@ -122,7 +122,7 @@ function App() {
               <a class="mo-list" href="#projects"><span></span>Projects</a>
                <CustomCards card={{timeline: "SEP - NOV 2023", title: "E-commerce Store for Figures - Bangboo shop", 
                description: "Designed and developed the UI/UX for a figure shopping website inspired by the game ZZZ, featuring collectible Bangboo figures. Conceptualized the website’s functional flow, user interactions, and structured key features to ensure a seamless and engaging user experience with responsive design across all devices.", 
-               skill_1: "HTML & CSS", skill_2: "JavaScript", skill_3: "Bootstrap", skill_4: "ASP.NET",
+               skill_1: "HTML", skill_2: "JS", skill_3: "Bootstrap", skill_4: "ASP.NET",
                link: "https://github.com/Quang161/E-commerce-Store-for-Figures-Bangboo-shop"}}/>
               <CustomCards card={{timeline: "FEB - APR 2023", title: "Moblie card Game - Higher or lower", 
                description: "Developed a Higher or Lower card game where players guess if the next card will be higher or lower. Implemented core mechanics such as card shuffling, comparison logic, and win/loss conditions. Enhanced gameplay with a score multiplier that rewards streaks of correct guesses, making the experience more dynamic and rewarding.", 
@@ -130,7 +130,7 @@ function App() {
                link: "https://github.com/Quang161/Moblie-card-Game-Higher-or-lower"}}/>
                <CustomCards card={{timeline: "OCT - DEC 2022", title: "WinForms-Based Management System - Pet shop", 
                description: "Designed and developed the UI/UX for a figure shopping website inspired by the game ZZZ, featuring collectible Bangboo figures. Conceptualized the website’s functional flow, user interactions, and structured key features to ensure a seamless and engaging user experience with responsive design across all devices.", 
-               skill_1: "HTML & CSS", skill_2: "JavaScript", skill_3: "Winform", skill_4: "C#",
+               skill_1: "HTML", skill_2: "JS", skill_3: "Winform", skill_4: "C#",
                link: "https://github.com/Quang161/WinForms-Based-Management-System-Pet-shop"}}/>
             </section>
           </main>
