@@ -9,7 +9,7 @@ function scroll () {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
 
-                if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight) {
+                if (scrollPosition >= sectionTop - 120 && scrollPosition < sectionTop + sectionHeight) {
                     navLinks.forEach((link) => link.classList.remove("active"));
                     navLinks[index].classList.add("active");
 
@@ -19,11 +19,13 @@ function scroll () {
             });
         }
 
+        activateNav();
+        
         navLinks.forEach((link, index) => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
                 const targetSection = sections[index];
-                const offset = 80;
+                const offset = 100;
 
                 window.scrollTo({
                     top: targetSection.offsetTop - offset,

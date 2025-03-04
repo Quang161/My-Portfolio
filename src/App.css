@@ -22,28 +22,29 @@ header {
 }
 
 header a {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
     font-weight: bolder;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .mo-list {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bolder;
     text-decoration: none;
+    padding-top: 10px;
     padding-bottom: 10px;
     display: block;
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin-top: 0;
+    font-size: 1.25rem;
+    margin-top: 10px;
     margin-bottom: 15px !important;
 }
 
 p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 0;
     margin-bottom: 20px;
     line-height: 1.5;
@@ -227,6 +228,12 @@ p::selection,
 .throwable::selection {
     user-select: none;
 }
+
+img::before {
+    content: none !important;
+    display: none !important;
+}
+
 @media (min-width: 1200px) {
     html {
         overflow: hidden;
@@ -296,7 +303,7 @@ p::selection,
         }
     }
 
-    .social img {
+    .social {
         padding-bottom: 150px;
     }
 

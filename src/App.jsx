@@ -39,13 +39,13 @@ function App() {
             <p>I craft smooth, snappy and seamless digital <br/>experiences for all.</p>
             <div class="social">
             <a href="https://github.com/Quang161" target="_blank">
-              <img alt="github" width="36" height="36" srcset="/icons8-github-50.png"></img>
+              <img alt="github" width="36" height="36" srcset="/My-Portfolio/icons8-github-50.png"></img>
             </a>
             <a href="https://zalo.me/0867700534" target="_blank">
-              <img alt="Zalo" width="36" height="36" srcset="/icons8-zalo-50.png"></img>
+              <img alt="Zalo" width="36" height="36" srcset="/My-Portfolio/icons8-zalo-50.png"></img>
             </a>
              <a href="mailto:quangtrn1612003@gmail.com">
-              <img alt="Gmail" width="36" height="36" srcset="/icons8-gmail-48.png"></img>
+              <img alt="Gmail" width="36" height="36" srcset="/My-Portfolio/icons8-gmail-48.png"></img>
             </a>
             </div>
             <div class="list">
