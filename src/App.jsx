@@ -2,6 +2,7 @@ import scroll from "./Animation/Scroll"
 import entry from "./Animation/Entry";
 import CustomCursor from "./components/CustomCursor";
 import CustomCards from "./components/CustomCards";
+import 'normalize.css';
 import './App.css'
 import "./skill.css"
 
