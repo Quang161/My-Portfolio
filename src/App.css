@@ -111,6 +111,11 @@ li::marker {
     padding: 0.1rem 0.25rem;
 }
 
+.group-list span {
+    display: inline-block;
+    position: relative;
+}
+
 .group-list span::before,
 .group-list span::after,
 .group-list::before,
@@ -118,22 +123,25 @@ li::marker {
     content: "";
     position: absolute;
     background-color: white;
-    transition: all 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform, height;
 }
 
 .group-list span::before {
     top: 0;
     left: 0;
-    height: 0%;
+    height: 100%;
     width: 2px;
-    transition-delay: 1s;
+    transform: scaleY(0);
+    transition-delay: 0.5s;
 }
 
 .group-list span::after {
     bottom: 0;
     right: 0;
-    height: 0%;
+    height: 100%;
     width: 2px;
+    transform: scaleY(0); 
     transition-delay: 0s;
 }
 
@@ -143,7 +151,7 @@ li::marker {
     height: 2px;
     width: 100%;
     transform: translateX(-105%);
-    transition-delay: 1.5s;
+    transition-delay: 1s;
 }
 
 .group-list::after {
@@ -152,7 +160,7 @@ li::marker {
     height: 2px;
     width: 100%;
     transform: translateX(105%);
-    transition-delay: 0.5s;
+    transition-delay: 0s;
 }
 
 .group-list.active::before,
@@ -162,13 +170,13 @@ li::marker {
 
 .group-list.active span::before,
 .group-list.active span::after {
-    height: 100%;
+    transform: scaleY(1);
 }
 
 .group-list.active {
     background-color: white;
     color: black;
-    transition: background-color 1s ease-in-out 1.5s, color 1.5s ease-in-out 1.5s;
+    transition: background-color 0.5s ease-in-out 1s, color 1s ease-in-out 1s;
 }
 
 img::selection,

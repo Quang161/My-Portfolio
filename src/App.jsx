@@ -5,7 +5,6 @@ import CustomCards from "./components/CustomCards";
 import 'normalize.css';
 import './App.css'
 import "./skill.css"
-import "./rawline.css";
 
 function App() {
   scroll();
