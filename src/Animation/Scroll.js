@@ -60,7 +60,7 @@ function scroll () {
             let offsetTop = prevSection.getBoundingClientRect().top + window.scrollY - 100;
             window.scrollTo({ top: offsetTop, behavior: "smooth" });
         }
-    }, { passive: false });
+    }, { passive: true });
 }
 
 export default scroll;
