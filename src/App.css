@@ -253,8 +253,7 @@ img::before {
 
 @media (min-width: 1200px) {
     html {
-        scroll-behavior: smooth;
-        overflow-y: auto;
+        overflow: hidden;
     }
     
     .pagebody {

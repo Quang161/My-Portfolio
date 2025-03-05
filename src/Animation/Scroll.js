@@ -1,4 +1,4 @@
-function scroll () {
+function scroll() {
     document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".group-list");
@@ -20,29 +20,20 @@ function scroll () {
         }
 
         activateNav();
-        
+        window.addEventListener("scroll", activateNav);
+
         navLinks.forEach((link, index) => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
-                setTimeout(() => {
-                    const targetSection = sections[index];
-                    const offset = 100;
-                    const sectionTop = targetSection.getBoundingClientRect().top + window.scrollY;
-                    
-                    window.scrollTo({
-                        top: sectionTop - offset,
-                        behavior: "smooth"
-                    });
-                }, 10);
+                let targetSection = sections[index];
+                let offsetTop = targetSection.getBoundingClientRect().top + window.scrollY - 100;
+                window.scrollTo({ top: offsetTop, behavior: "smooth" });
             });
         });
-
-        window.addEventListener("scroll", activateNav);
     });
 
     document.addEventListener("wheel", function (event) {
         event.preventDefault();
-
         let sections = document.querySelectorAll(".section-List section");
         let currentIndex = 0;
 
