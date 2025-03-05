@@ -50,15 +50,15 @@ function App() {
             </a>
             </div>
             <div class="list">
-              <li>
-                <a class="group-list" href="#about"><span></span>About</a>
-              </li>
-              <li>
-                <a class="group-list" href="#skills"><span></span>Skills</a>
-              </li>
-              <li>
-                <a class="group-list" href="#projects"><span></span>Projects</a>
-              </li>
+            <li>
+              <a class="group-list" href="#about"><span>&nbsp;</span>About</a>
+            </li>
+            <li>
+              <a class="group-list" href="#skills"><span>&nbsp;</span>Skills</a>
+            </li>
+            <li>
+              <a class="group-list" href="#projects"><span>&nbsp;</span>Projects</a>
+            </li>
             </div>
           </header>
           <main class="section-List">
