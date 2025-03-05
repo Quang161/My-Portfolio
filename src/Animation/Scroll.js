@@ -37,7 +37,7 @@ function scroll() {
         window.addEventListener("scroll", activateNav);
     });
 
-    document.addEventListener("wheel", function (event) {
+    function handleScroll(event) {
         event.preventDefault();
 
         let sections = document.querySelectorAll(".section-List section");
@@ -52,14 +52,30 @@ function scroll() {
 
         if (event.deltaY > 0 && currentIndex < sections.length - 1) {
             let nextSection = sections[currentIndex + 1];
-            let offsetTop = nextSection.offsetTop - 100;
+            let offsetTop = nextSection.getBoundingClientRect().top + window.scrollY - 100;
             window.scrollTo({ top: offsetTop, behavior: "smooth" });
+
         } else if (event.deltaY < 0 && currentIndex > 0) {
             let prevSection = sections[currentIndex - 1];
-            let offsetTop = prevSection.offsetTop - 100;
+            let offsetTop = prevSection.getBoundingClientRect().top + window.scrollY - 100;
             window.scrollTo({ top: offsetTop, behavior: "smooth" });
         }
-    }, { passive: false });
+    }
+
+    let passiveSupported = false;
+    try {
+        let options = {
+            get passive() {
+                passiveSupported = true;
+                return false;
+            },
+        };
+        window.addEventListener("test", null, options);
+    } catch (err) {
+        passiveSupported = false;
+    }
+
+    document.addEventListener("wheel", handleScroll, passiveSupported ? { passive: false } : false);
 }
 
 export default scroll;
