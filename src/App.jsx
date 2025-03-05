@@ -51,13 +51,13 @@ function App() {
             </div>
             <div class="list">
             <li>
-              <a class="group-list" href="#about"><span>&nbsp;</span>About</a>
+                <a class="group-list" href="#about"><span>&nbsp;</span>About</a>
             </li>
             <li>
-              <a class="group-list" href="#skills"><span>&nbsp;</span>Skills</a>
+                <a class="group-list" href="#skills"><span>&nbsp;</span>Skills</a>
             </li>
             <li>
-              <a class="group-list" href="#projects"><span>&nbsp;</span>Projects</a>
+                <a class="group-list" href="#projects"><span>&nbsp;</span>Projects</a>
             </li>
             </div>
           </header>
