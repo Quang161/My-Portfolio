@@ -79,6 +79,13 @@ p {
 
 .list {
     display: none;
+    padding-left: 0;
+}
+
+@-moz-document url-prefix() {
+    .list {
+        padding-left: 40px;
+    }
 }
 
 li {
@@ -99,9 +106,16 @@ li {
 }
 
 li::marker {
-    color: white;
-    font-size: 3.2em;
-    line-height: 0.5;
+    content: "";
+}
+
+@-moz-document url-prefix() {
+    li::marker {
+        content: initial;
+        color: white;
+        font-size: 3.2em;
+        line-height: 0.5;
+    }
 }
 
 .group-list {
