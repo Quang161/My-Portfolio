@@ -24,15 +24,16 @@ function scroll () {
         navLinks.forEach((link, index) => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
-                const targetSection = sections[index];
-                const offset = 100;
-        
                 setTimeout(() => {
+                    const targetSection = sections[index];
+                    const offset = 100;
+                    const sectionTop = targetSection.getBoundingClientRect().top + window.scrollY;
+                    
                     window.scrollTo({
-                        top: targetSection.offsetTop - offset,
+                        top: sectionTop - offset,
                         behavior: "smooth"
                     });
-                }, 50);
+                }, 10);
             });
         });
 
