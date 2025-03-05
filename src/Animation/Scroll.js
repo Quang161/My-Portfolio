@@ -26,7 +26,7 @@ function scroll() {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
                 let targetSection = sections[index];
-                let offsetTop = targetSection.getBoundingClientRect().top + window.scrollY - 100;
+                let offsetTop = targetSection.offsetTop - 100;
                 window.scrollTo({ top: offsetTop, behavior: "smooth" });
             });
         });
@@ -46,12 +46,12 @@ function scroll() {
 
         if (event.deltaY > 0 && currentIndex < sections.length - 1) {
             let nextSection = sections[currentIndex + 1];
-            let offsetTop = nextSection.getBoundingClientRect().top + window.scrollY - 100;
+            let offsetTop = nextSection.offsetTop - 100;
             window.scrollTo({ top: offsetTop, behavior: "smooth" });
 
         } else if (event.deltaY < 0 && currentIndex > 0) {
             let prevSection = sections[currentIndex - 1];
-            let offsetTop = prevSection.getBoundingClientRect().top + window.scrollY - 100;
+            let offsetTop = prevSection.offsetTop - 100;
             window.scrollTo({ top: offsetTop, behavior: "smooth" });
         }
     }, { passive: false });
