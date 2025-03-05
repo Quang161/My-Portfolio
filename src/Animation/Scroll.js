@@ -25,14 +25,15 @@ function scroll () {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
                 const targetSection = sections[index];
-                const offset = 100;
-
+                const scrollY = window.scrollY || document.documentElement.scrollTop;
+                const offsetTop = targetSection.getBoundingClientRect().top + scrollY - 100;
+        
                 window.scrollTo({
-                    top: targetSection.offsetTop - offset,
+                    top: offsetTop,
                     behavior: "smooth"
                 });
             });
-        });
+        });        
 
         window.addEventListener("scroll", activateNav);
     });
@@ -60,7 +61,7 @@ function scroll () {
             let offsetTop = prevSection.getBoundingClientRect().top + window.scrollY - 100;
             window.scrollTo({ top: offsetTop, behavior: "smooth" });
         }
-    }, { passive: true });
+    }, { passive: false });
 }
 
 export default scroll;
