@@ -254,6 +254,7 @@ img::before {
 @media (min-width: 1200px) {
     html {
         overflow: hidden;
+        scroll-padding-top: 5rem;
     }
     
     .pagebody {
