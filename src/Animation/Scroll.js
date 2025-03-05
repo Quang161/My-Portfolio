@@ -1,4 +1,4 @@
-function scroll () {
+function scroll() {
     document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".group-list");
@@ -20,48 +20,67 @@ function scroll () {
         }
 
         activateNav();
-        
+
         navLinks.forEach((link, index) => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
                 const targetSection = sections[index];
-                const scrollY = window.scrollY || document.documentElement.scrollTop;
-                const offsetTop = targetSection.getBoundingClientRect().top + scrollY - 100;
-        
+                const offset = 100;
+                
+                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+
                 window.scrollTo({
-                    top: offsetTop,
-                    behavior: "smooth"
+                    top: targetPosition,
+                    behavior: "smooth",
                 });
             });
-        });        
+        });
 
         window.addEventListener("scroll", activateNav);
     });
 
-    document.addEventListener("wheel", function (event) {
-        event.preventDefault();
+    let isScrolling = false;
+    document.addEventListener(
+        "wheel",
+        function (event) {
+            if (isScrolling) return;
+            isScrolling = true;
 
-        let sections = document.querySelectorAll(".section-List section");
-        let currentIndex = 0;
+            let sections = document.querySelectorAll("section");
+            let currentIndex = 0;
 
-        sections.forEach((section, index) => {
-            let rect = section.getBoundingClientRect();
-            if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-                currentIndex = index;
+            sections.forEach((section, index) => {
+                let rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                    currentIndex = index;
+                }
+            });
+
+            let targetSection = null;
+            if (event.deltaY > 0 && currentIndex < sections.length - 1) {
+                targetSection = sections[currentIndex + 1];
+            } else if (event.deltaY < 0 && currentIndex > 0) {
+                targetSection = sections[currentIndex - 1];
             }
-        });
 
-        if (event.deltaY > 0 && currentIndex < sections.length - 1) {
-            let nextSection = sections[currentIndex + 1];
-            let offsetTop = nextSection.getBoundingClientRect().top + window.scrollY - 100;
-            window.scrollTo({ top: offsetTop, behavior: "smooth" });
+            if (targetSection) {
+                let targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - 100;
 
-        } else if (event.deltaY < 0 && currentIndex > 0) {
-            let prevSection = sections[currentIndex - 1];
-            let offsetTop = prevSection.getBoundingClientRect().top + window.scrollY - 100;
-            window.scrollTo({ top: offsetTop, behavior: "smooth" });
-        }
-    }, { passive: false });
+                requestAnimationFrame(() => {
+                    window.scrollTo({ top: targetPosition, behavior: "smooth" });
+                });
+
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 600);
+            } else {
+                isScrolling = false;
+            }
+
+            event.preventDefault();
+        },
+        { passive: false }
+    );
 }
 
 export default scroll;
