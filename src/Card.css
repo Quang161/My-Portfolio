@@ -1,8 +1,9 @@
 .card-project {
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
-    border-radius: 10px;
+    padding-top: 7.5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
     position: relative;
     overflow: hidden;
 }
@@ -131,6 +132,6 @@
 
     .skill > div {
         font-size: 0.8rem;
-        margin: 5px 0px 10px 10px;
+        margin: 5px 0px 5px 5px;
     }
 }
