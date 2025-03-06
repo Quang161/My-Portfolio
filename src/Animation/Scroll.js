@@ -1,7 +1,10 @@
-function scroll() {
-    document.addEventListener("DOMContentLoaded", function () {
+function scroll () {
+    window.addEventListener("load", function () {
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".group-list");
+
+        console.log(document.querySelectorAll(".group-list"));
+        console.log(document.querySelectorAll("section"));
 
         function activateNav() {
             let scrollPosition = window.scrollY;
@@ -11,29 +14,38 @@ function scroll() {
 
                 if (scrollPosition >= sectionTop - 120 && scrollPosition < sectionTop + sectionHeight) {
                     navLinks.forEach((link) => link.classList.remove("active"));
-                    navLinks[index].classList.add("active");
-
-                    document.querySelectorAll("li").forEach((li) => li.classList.remove("active"));
-                    navLinks[index].parentElement.classList.add("active");
+                    if (navLinks[index]) {
+                        navLinks[index].classList.add("active");
+                        document.querySelectorAll("li").forEach((li) => li.classList.remove("active"));
+                        navLinks[index].parentElement.classList.add("active");
+                    }
                 }
             });
         }
-
         activateNav();
         window.addEventListener("scroll", activateNav);
-
+        
         navLinks.forEach((link, index) => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
-                let targetSection = sections[index];
-                let offsetTop = targetSection.getBoundingClientRect().top + window.scrollY - 100;
-                window.scrollTo({ top: offsetTop, behavior: "smooth" });
+                const targetSection = sections[index];
+                const offset = 100;
+        
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - offset,
+                        behavior: "smooth"
+                    });
+                }, 50);
             });
         });
+
+        window.addEventListener("scroll", activateNav);
     });
 
     document.addEventListener("wheel", function (event) {
         event.preventDefault();
+
         let sections = document.querySelectorAll(".section-List section");
         let currentIndex = 0;
 
